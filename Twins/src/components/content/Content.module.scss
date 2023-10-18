@@ -1,4 +1,5 @@
 .content {
+  position: relative;
   width: 80%;
   height: 42rem;
   padding: 4rem;
@@ -7,6 +8,11 @@
   margin-bottom: 10rem;
   background-color: #f3d9fa;
   border-radius: 2rem;
+
+  .indicator {
+    position: absolute;
+    top: -2.2em;
+  }
 
   &__inner {
     position: relative;

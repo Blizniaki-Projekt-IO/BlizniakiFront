@@ -18,7 +18,8 @@ function Content() {
   );
 
   return (
-    <div className={classes.content} id="content">
+    <div className={classes.content}>
+      <div id="content" className={classes.indicator}></div>
       <div className={classes["content__inner"]}>{content}</div>
     </div>
   );

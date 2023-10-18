@@ -8,7 +8,7 @@ function Cam(props) {
       <div className={classes.webcamPanel}>
         <p
           onClick={() => {
-            props.onDisableWebcam();
+            props.onShowDefault();
           }}
         >
           <svg

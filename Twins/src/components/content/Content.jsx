@@ -2,19 +2,28 @@ import classes from "./Content.module.scss";
 import Default from "./Default";
 import Cam from "./Cam";
 import { useState } from "react";
+import Drop from "./Drop";
 
 function Content() {
-  const onDisableWebcam = () => {
-    console.log("aaa");
-    setContent(<Default onEnableWebcam={onEnableWebcam} />);
+  const onShowDefault = () => {
+    setContent(
+      <Default
+        onShowWebcam={onShowWebcam}
+        onShowFilereader={onShowFilereader}
+      />
+    );
   };
 
-  const onEnableWebcam = () => {
-    setContent(<Cam onDisableWebcam={onDisableWebcam} />);
+  const onShowWebcam = () => {
+    setContent(<Cam onShowDefault={onShowDefault} />);
+  };
+
+  const onShowFilereader = () => {
+    setContent(<Drop onShowDefault={onShowDefault} />);
   };
 
   const [content, setContent] = useState(
-    <Default onEnableWebcam={onEnableWebcam} />
+    <Default onShowWebcam={onShowWebcam} onShowFilereader={onShowFilereader} />
   );
 
   return (

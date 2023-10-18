@@ -91,14 +91,18 @@
       }
     }
 
-    .webcamContainer {
+    @mixin container {
       position: absolute;
       width: 100%;
       height: 100%;
       display: flex;
-      justify-content: center; /* Center horizontally */
-      align-items: center; /* Center vertically */
+      justify-content: center;
+      align-items: center;
       overflow: hidden;
+    }
+
+    .webcamContainer {
+      @include container;
 
       .webcam {
         aspect-ratio: 1/1;
@@ -152,6 +156,63 @@
               background-color: #e599f7;
             }
           }
+        }
+      }
+    }
+
+    .dropContainer {
+      @include container;
+
+      label {
+        position: relative;
+        width: 40%;
+        aspect-ratio: 1/1;
+        transition: all 0.3s;
+        border-radius: 2rem;
+        padding: 4rem;
+
+        &::after {
+          content: "Select File";
+          position: absolute;
+          top: 80%;
+          left: 0;
+
+          font-size: 2rem;
+          font-weight: bold;
+          width: 100%;
+          text-align: center;
+        }
+
+        &:hover {
+          background-color: rgba(0, 0, 0, 0.1);
+          scale: 0.9;
+          cursor: pointer;
+        }
+
+        input {
+          display: none;
+        }
+      }
+
+      p {
+        position: absolute;
+        top: 4rem;
+        right: 4rem;
+        width: 6rem;
+        aspect-ratio: 1/1;
+        background-color: #9c36b5;
+        border-radius: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:hover {
+          cursor: pointer;
+          opacity: 0.9;
+        }
+
+        svg {
+          width: 60%;
         }
       }
     }

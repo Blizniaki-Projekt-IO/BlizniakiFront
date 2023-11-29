@@ -1,0 +1,220 @@
+.content {
+  position: relative;
+  width: 80%;
+  height: 42rem;
+  padding: 4rem;
+  margin: auto;
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+  background-color: #f3d9fa;
+  border-radius: 2rem;
+
+  .indicator {
+    position: absolute;
+    top: -2.2em;
+  }
+
+  &__inner {
+    position: relative;
+    background-color: #fff;
+    height: 100%;
+    border-radius: 2rem;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    transform-style: preserve-3d;
+    // box-shadow: 2rem 1rem 0 0 #862e9c;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -2rem;
+      right: -2rem;
+      height: 100%;
+      width: 80%;
+      background-color: #862e9c;
+      transform: translateZ(-1px);
+      border-radius: 2rem;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: -2rem;
+      top: -2rem;
+      height: 40%;
+      width: 60%;
+      background-color: #862e9c;
+      transform: translateZ(-1px);
+      border-radius: 2rem;
+    }
+
+    .col {
+      position: relative;
+      border-radius: 2rem;
+      height: 100%;
+      transition: all 0.3s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0.8;
+      color: #862e9c;
+
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.1);
+        scale: 0.9;
+        cursor: pointer;
+        opacity: 1;
+      }
+
+      svg {
+        opacity: 0.9;
+        width: 50%;
+      }
+
+      &::after {
+        position: absolute;
+        top: 80%;
+        font-size: 2rem;
+        font-weight: bold;
+      }
+
+      &:nth-child(1) {
+        &::after {
+          content: "Upload Image";
+        }
+      }
+      &:nth-child(2) {
+        &::after {
+          content: "Take Photo";
+        }
+      }
+    }
+
+    @mixin container {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .webcamContainer {
+      @include container;
+
+      .webcam {
+        aspect-ratio: 1/1;
+        border-radius: 100%;
+        transform: scaleX(-1);
+      }
+
+      .webcamPanel {
+        position: absolute;
+        top: 50%;
+        right: 2rem;
+        transform: translateY(-50%);
+        width: 8rem;
+        height: 24rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+
+        p {
+          position: relative;
+          width: 80%;
+          aspect-ratio: 1/1;
+          background-color: #9c36b5;
+          border-radius: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          &:hover {
+            cursor: pointer;
+            opacity: 0.9;
+          }
+
+          &:nth-child(1) {
+            svg {
+              width: 60%;
+            }
+          }
+
+          &:nth-child(2) {
+            &::after {
+              content: "";
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              width: 80%;
+              height: 80%;
+              border-radius: 100%;
+              background-color: #e599f7;
+            }
+          }
+        }
+      }
+    }
+
+    .dropContainer {
+      @include container;
+
+      label {
+        position: relative;
+        width: 40%;
+        aspect-ratio: 1/1;
+        transition: all 0.3s;
+        border-radius: 2rem;
+        padding: 4rem;
+
+        &::after {
+          content: "Select File";
+          position: absolute;
+          top: 80%;
+          left: 0;
+
+          font-size: 2rem;
+          font-weight: bold;
+          width: 100%;
+          text-align: center;
+        }
+
+        &:hover {
+          background-color: rgba(0, 0, 0, 0.1);
+          scale: 0.9;
+          cursor: pointer;
+        }
+
+        input {
+          display: none;
+        }
+      }
+
+      p {
+        position: absolute;
+        top: 4rem;
+        right: 4rem;
+        width: 6rem;
+        aspect-ratio: 1/1;
+        background-color: #9c36b5;
+        border-radius: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:hover {
+          cursor: pointer;
+          opacity: 0.9;
+        }
+
+        svg {
+          width: 60%;
+        }
+      }
+    }
+  }
+}

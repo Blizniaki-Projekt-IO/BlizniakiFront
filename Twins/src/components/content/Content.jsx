@@ -3,6 +3,9 @@ import Default from "./Default";
 import Cam from "./Cam";
 import { useState } from "react";
 import Drop from "./Drop";
+import Quiz from "./Quiz";
+import QuizContent from "./QuizContent";
+import Answers from "./Answers";
 
 function Content() {
   const onShowDefault = () => {
@@ -14,12 +17,24 @@ function Content() {
     );
   };
 
+  const onShowQuiz = (image) => {
+    setContent(<Quiz image={image} onShowQuizContent={onShowQuizContent} />);
+  };
+
   const onShowWebcam = () => {
-    setContent(<Cam onShowDefault={onShowDefault} />);
+    setContent(<Cam onShowDefault={onShowDefault} onShowQuiz={onShowQuiz} />);
   };
 
   const onShowFilereader = () => {
-    setContent(<Drop onShowDefault={onShowDefault} />);
+    setContent(<Drop onShowDefault={onShowDefault} onShowQuiz={onShowQuiz} />);
+  };
+
+  const onShowQuizContent = () => {
+    setContent(<QuizContent onShowAnswers={onShowAnswers} />);
+  };
+
+  const onShowAnswers = () => {
+    setContent(<Answers />);
   };
 
   const [content, setContent] = useState(

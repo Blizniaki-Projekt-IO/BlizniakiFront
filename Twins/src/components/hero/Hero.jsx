@@ -4,11 +4,10 @@ function Hero() {
   return (
     <div className={classes.hero}>
       <div className={classes["hero__intro"]}>
-        <h1>TWINS</h1>
-        <h2>Animal-Face AI Test</h2>
+        <h1>BLIŹNIAKI</h1>
+        <h2>Test SI na podobieństwo do zwierzęcia</h2>
         <h3>
-          Unleash your inner animal! Our AI will reveal your animal
-          doppelgänger. Let the fun begin!
+        Uwolnij swoje wewnętrzne zwierzę! Nasza sztuczna inteligencja ujawni Twój zwierzęcy sobowtór. Niech zabawa się zacznie!
         </h3>
         <a href="#content">
           <div className={classes.arrow}>

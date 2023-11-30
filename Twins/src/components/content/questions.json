@@ -1,0 +1,218 @@
+[
+  {
+    "CECHA": "Zabawa, Aktywność",
+    "PYTANIE": "Czy wolisz spędzać weekend na wycieczce górskiej, zdobywając szczyty, czy relaksując się na plaży, kąpiąc się w słońcu?",
+    "ODPOWIEDŹ 1": "Wycieczka górska",
+    "ODPOWIEDŹ 0": "Plaża"
+  },
+  {
+    "CECHA": "Zabawa, Aktywność",
+    "PYTANIE": "W klubie bardziej cię pociąga tańczenie do świtu, czy rozmowy przy drinku z bliskimi znajomymi?",
+    "ODPOWIEDŹ 1": "Tańczenie",
+    "ODPOWIEDŹ 0": "Rozmowy"
+  },
+  {
+    "CECHA": "Zabawa, Aktywność",
+    "PYTANIE": "Wolisz spędzić piątkowy wieczór czytając książkę w domu, czy na imprezie w klubie?",
+    "ODPOWIEDŹ 1": "Impreza",
+    "ODPOWIEDŹ 0": "Książka"
+  },
+  {
+    "CECHA": "Zabawa, Aktywność",
+    "PYTANIE": "Gdybyś miał/a zaplanować swoją imprezę urodzinową, byłaby to intensywna zabawa z tańcami, czy bardziej z relaksującym nastrojem i rozmowami?",
+    "ODPOWIEDŹ 1": "Tańce",
+    "ODPOWIEDŹ 0": "Rozmowy"
+  },
+  {
+    "CECHA": "Zabawa, Aktywność",
+    "PYTANIE": "Gdyby twój przyjaciel przygotował dla ciebie niespodziankę na następny weekend. Wolałbyś/Wolałabyś, by to było wyjście do parku czy na tor gokartowy?",
+    "ODPOWIEDŹ 1": "Tor gokartowy",
+    "ODPOWIEDŹ 0": "Park"
+  },
+  {
+    "CECHA": "Zabawa, Aktywność",
+    "PYTANIE": "Wolałbyś/Wolałabyś udział w spontanicznym festiwalu muzyki na świeżym powietrzu, czy cichszym wieczorem w artystycznej kawiarni z występem lokalnego zespołu?",
+    "ODPOWIEDŹ 1": "Festiwal muzyki",
+    "ODPOWIEDŹ 0": "Artystyczna kawiarnia"
+  },
+  {
+    "CECHA": "Lojalność",
+    "PYTANIE": "Kiedy znajomy potrzebuje pomocy, czy jesteś gotów/a zawsze mu pomóc, nawet kosztem własnych zobowiązań, czy raczej stawiasz na swoje sprawy?",
+    "ODPOWIEDŹ 1": "Przyjaciel",
+    "ODPOWIEDŹ 0": "Swoje sprawy"
+  },
+  {
+    "CECHA": "Lojalność",
+    "PYTANIE": "Gdybyś dowiedział/a się, że twój przyjaciel jest niesłusznie krytykowany przez innych, czy stanął/a byś w jego obronie, nawet jeśli oznaczałoby to utratę poparcia innych znajomych? ",
+    "ODPOWIEDŹ 1": "Tak",
+    "ODPOWIEDŹ 0": "Nie"
+  },
+  {
+    "CECHA": "Lojalność",
+    "PYTANIE": "Gdyby twój przyjaciel znalazł/a się w trudnej sytuacji, czy poświęcił/a byś swój czas i energię, aby mu/jej pomóc, nawet jeśli oznaczałoby to rezygnację z własnych planów? ",
+    "ODPOWIEDŹ 1": "Tak",
+    "ODPOWIEDŹ 0": "Nie"
+  },
+  {
+    "CECHA": "Lojalność",
+    "PYTANIE": "Gdyby twój przyjaciel popełnił poważny błąd w miejscu pracy, który mógłby go/ją kosztować posadę, milczałbyś/milczałabyś nawet kosztem własnej pozycji czy zgłosił/a to przełożonym?",
+    "ODPOWIEDŹ 1": "Milczenie",
+    "ODPOWIEDŹ 0": "Zgłoszenie przełożonym"
+  },
+  {
+    "CECHA": "Lojalność",
+    "PYTANIE": "Gdybyś został/a wezwany/a do złożenia zeznań w sądzie, które mogłyby zaszkodzić twojemu przyjacielowi, ale jednocześnie byłyby prawdziwe, czy zdecydował/a byś się na to, czy raczej próbował/a byś uniknąć niewygodnych faktów?",
+    "ODPOWIEDŹ 1": "Unikanie niewygodnych",
+    "ODPOWIEDŹ 0": "Złożenie zeznań"
+  },
+  {
+    "CECHA": "Lojalność",
+    "PYTANIE": "Gdybyś posiadał/a informację, która mogłaby zaszkodzić reputacji twojego przyjaciela, ale jednocześnie miała kluczowe znaczenie dla dobra publicznego, czy zdecydował/a byś się na ujawnienie tej informacji?",
+    "ODPOWIEDŹ 1": "Nie",
+    "ODPOWIEDŹ 0": "Tak"
+  },
+  {
+    "CECHA": "Spokój, opanowanie",
+    "PYTANIE": "Czy w sytuacjach stresowych jesteś w stanie zachować spokój i podejść do problemu z opanowaniem, czy łatwo tracisz nerwy?",
+    "ODPOWIEDŹ 1": "Spokój",
+    "ODPOWIEDŹ 0": "Tracę nerwy"
+  },
+  {
+    "CECHA": "Spokój, opanowanie",
+    "PYTANIE": "Czy zazwyczaj utrzymujesz spokojny ton głosu i spokojną mimikę twarzy, nawet gdy jesteś zdenerwowany/a, czy tendencja do wyrażania emocji jest u ciebie silniejsza?",
+    "ODPOWIEDŹ 1": "Spokój",
+    "ODPOWIEDŹ 0": "Zdenerwowanie"
+  },
+  {
+    "CECHA": "Spokój, opanowanie",
+    "PYTANIE": "Czy w sytuacjach niepewności i chaosu zazwyczaj utrzymujesz wewnętrzną równowagę, czy może stajesz się bardziej skłonny/a do podejmowania impulsywnych decyzji?",
+    "ODPOWIEDŹ 1": "Równowaga",
+    "ODPOWIEDŹ 0": "Impulsywność"
+  },
+  {
+    "CECHA": "Spokój, opanowanie",
+    "PYTANIE": "Czy zazwyczaj reagujesz na krytykę w sposób zimny i zrównoważony, czy bardziej emocjonalnie i defensywnie?",
+    "ODPOWIEDŹ 1": "Zimny",
+    "ODPOWIEDŹ 0": "Emocjonalnie"
+  },
+  {
+    "CECHA": "Spokój, opanowanie",
+    "PYTANIE": "Gdyby przez cały dzień wszystko szło po nie twojej myśli, a na sam koniec dnia się okazało, że zapomniałeś/aś zabrać telefonu z pracy i musisz się wracać po niego jadąc 30 minut do biura, to wybuchnąłbyś/ęłabyś złością czy zachował/a stoicki spokój?",
+    "ODPOWIEDŹ 1": "Tak",
+    "ODPOWIEDŹ 0": "Nie"
+  },
+  {
+    "CECHA": "Spokój, opanowanie",
+    "PYTANIE": "Gdyby ktoś Ci ciągle wytykał, że nie masz racji, ale jesteś w stu procentach przekonany/a, że ją masz. Zareagowałbyś/abyś złością i zaczął/ęła na tego kogoś krzyczeć, czy w spokoju wytłumaczyłbyś/abyś, że to on się myli.",
+    "ODPOWIEDŹ 1": "Spokój",
+    "ODPOWIEDŹ 0": "Krzyk"
+  },
+  {
+    "CECHA": "Opiekuńczość",
+    "PYTANIE": "Gdybyś zobaczył/a, że twój przyjaciel jest przygnębiony, czy bardziej skłaniał/a byś się do bezpośredniego wyrażenia zainteresowania i zapytania, czy zaczekałbyś, aż sam poruszy ten temat?",
+    "ODPOWIEDŹ 1": "Zapytanie",
+    "ODPOWIEDŹ 0": "Czekanie"
+  },
+  {
+    "CECHA": "Opiekuńczość",
+    "PYTANIE": "Gdybyś zauważył/a, że ktoś ma problem z zadaniem, czy bardziej skłaniał/a byś się do proaktywnego zaoferowania pomocy, czy oczekiwania, aż poprosi o wsparcie?",
+    "ODPOWIEDŹ 1": "Proaktywnie",
+    "ODPOWIEDŹ 0": "Oczekiwanie na prośbę"
+  },
+  {
+    "CECHA": "Opiekuńczość",
+    "PYTANIE": "Gdybyś zauważył/a, że ktoś jest przemęczony, czy bardziej skłaniał/a byś się do zaoferowania pomocy w konkretnych zadaniach, czy do wyrażenia ogólnego zrozumienia sytuacji?",
+    "ODPOWIEDŹ 1": "Konkretna pomoc",
+    "ODPOWIEDŹ 0": "Zrozumienie sytuacji"
+  },
+  {
+    "CECHA": "Opiekuńczość",
+    "PYTANIE": "Czy często zdarza ci się odmawiać pomocy swoim przyjaciołom?",
+    "ODPOWIEDŹ 1": "Nie",
+    "ODPOWIEDŹ 0": "Tak"
+  },
+  {
+    "CECHA": "Opiekuńczość",
+    "PYTANIE": "Czy zawsze jesteś otwarty/a na prośby o pomoc i chętny/a do niesienia wsparcia, nawet jeśli jesteś zajęty/a?",
+    "ODPOWIEDŹ 1": "Tak",
+    "ODPOWIEDŹ 0": "Nie"
+  },
+  {
+    "CECHA": "Opiekuńczość",
+    "PYTANIE": "Czy zauważasz, kiedy ktoś w twoim otoczeniu potrzebuje wsparcia, czy raczej potrzebujesz, aby cię zwrócono uwagę na te sytuację?",
+    "ODPOWIEDŹ 1": "Zauważam",
+    "ODPOWIEDŹ 0": "Zwrócenie uwagi"
+  },
+  {
+    "CECHA": "Interpersonalność",
+    "PYTANIE": "Czy preferujesz głębokie rozmowy z nielicznymi bliskimi przyjaciółmi, czy raczej luźne rozmowy z większą liczbą znajomych?",
+    "ODPOWIEDŹ 1": "Większa liczba",
+    "ODPOWIEDŹ 0": "Bliżsi znajomt"
+  },
+  {
+    "CECHA": "Interpersonalność",
+    "PYTANIE": "Gdybyś miał/a wybrać się na wydarzenie społeczne, czy bardziej interesuje cię możliwość nawiązania nowych znajomości, czy spędzenia czasu z tymi, których już znasz?",
+    "ODPOWIEDŹ 1": "Nowe znajomości",
+    "ODPOWIEDŹ 0": "Aktualne"
+  },
+  {
+    "CECHA": "Interpersonalność",
+    "PYTANIE": "Czy zazwyczaj inicjujesz interakcje społeczne, czy bardziej czekasz, aż inni się do ciebie zbliżą?",
+    "ODPOWIEDŹ 1": "Inicjuję",
+    "ODPOWIEDŹ 0": "Czekam"
+  },
+  {
+    "CECHA": "Interpersonalność",
+    "PYTANIE": "Czy zawsze jesteś gotów/a wysłuchać opinii innych ludzi, czy raczej kierujesz się własnymi przekonaniami i wartościami?",
+    "ODPOWIEDŹ 1": "Opinie innych",
+    "ODPOWIEDŹ 0": "Własne przekonania"
+  },
+  {
+    "CECHA": "Interpersonalność",
+    "PYTANIE": "Czy zależy ci na posiadaniu szerokiego kręgu znajomych, czy bardziej stawiasz na głębokie relacje z nielicznymi osobami?",
+    "ODPOWIEDŹ 1": "Szeroki krąg",
+    "ODPOWIEDŹ 0": "Głębokie, nieliczne"
+  },
+  {
+    "CECHA": "Interpersonalność",
+    "PYTANIE": "Gdybyś był/a na imprezie, a jedna osoba wydaje się być outsiderem, czy bardziej skłaniał/a byś się do nawiązania z nią rozmowy, czy pozostawił/a byś ją samą, zakładając, że znajdzie kogoś innego do rozmowy?",
+    "ODPOWIEDŹ 1": "Rozmowa",
+    "ODPOWIEDŹ 0": "Zostawienie samej"
+  },
+  {
+    "CECHA": "Lubisz zmiany?",
+    "PYTANIE": "Podczas planowania wakacji, czy preferujesz spędzanie czasu na jednym, dobrze znanym miejscu, czy eksplorowanie różnych środowisk i kultur?",
+    "ODPOWIEDŹ 1": "Jedno",
+    "ODPOWIEDŹ 0": "Różne"
+  },
+  {
+    "CECHA": "Lubisz zmiany?",
+    "PYTANIE": "Czy zazwyczaj jesteś gotów/a na spontaniczne podróże lub wydarzenia, które wymagają szybkiego dostosowania się do nowych warunków, czy planujesz wszystko z wyprzedzeniem?",
+    "ODPOWIEDŹ 1": "Spontaniczne",
+    "ODPOWIEDŹ 0": "Planuję"
+  },
+  {
+    "CECHA": "Lubisz zmiany?",
+    "PYTANIE": "Gdybyś miał/a zmienić pracę na zupełnie nową dziedzinę, czy zaintrygował/a byś się możliwościami nauki czegoś nowego, czy raczej obawiał/a byś się zmiany?",
+    "ODPOWIEDŹ 1": "Zaintrygowałbym się",
+    "ODPOWIEDŹ 0": "Obawiał się"
+  },
+  {
+    "CECHA": "Lubisz zmiany?",
+    "PYTANIE": "Czy otwarcie reagujesz na nowe technologie i innowacje, czy raczej trzymasz się sprawdzonych i znanych rozwiązań?",
+    "ODPOWIEDŹ 1": "Otwarcie",
+    "ODPOWIEDŹ 0": "Sprawdzone i znane"
+  },
+  {
+    "CECHA": "Lubisz zmiany?",
+    "PYTANIE": "Gdybyś dowiedział/a się, że twój bliski przyjaciel planuje radykalną zmianę w swoim życiu, a potrzebna mu/jej jest twoja wsparcie, czy bardziej skłaniał/a byś się do udzielenia mu/jej pełnego wsparcia, czy też sugerowania ostrożności?",
+    "ODPOWIEDŹ 1": "Wsparcie",
+    "ODPOWIEDŹ 0": "Ostrożność"
+  },
+  {
+    "CECHA": "Lubisz zmiany?",
+    "PYTANIE": "Gdybyś dostał/a propozycję pracy w innym kraju, gdzie wszystko byłoby zupełnie nowe, czy zdecydował/a byś się na to wyzwanie, czy raczej preferujesz stabilność swojego obecnego otoczenia?",
+    "ODPOWIEDŹ 1": "Nowa praca",
+    "ODPOWIEDŹ 0": "Stabilność"
+  }
+]

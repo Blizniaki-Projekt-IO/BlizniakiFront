@@ -18,7 +18,13 @@ function Content() {
   };
 
   const onShowQuiz = (image) => {
-    setContent(<Quiz image={image} onShowQuizContent={onShowQuizContent} />);
+    setContent(
+      <Quiz
+        image={image}
+        onShowQuizContent={onShowQuizContent}
+        onShowAnswers={onShowAnswers}
+      />
+    );
   };
 
   const onShowWebcam = () => {

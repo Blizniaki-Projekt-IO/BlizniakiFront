@@ -9,10 +9,15 @@ function Quiz(props) {
     try {
       const response = await axios.post(
         "http://localhost:8000/api/upload/",
-        formData
+        formData,
+        {
+          headers: {},
+        }
       );
 
       console.log(response.data);
+
+      props.onShowAnswers();
     } catch (error) {
       console.error("Failed to send image to the server", error);
     }

@@ -4,7 +4,7 @@ import questions from "./questions.json";
 
 function QuizContent(props) {
   const [currentCategoryIndex, setCurrentCategoryIndex] = useState(0);
-  const [userResponses, setUserResponses] = useState({});
+  const [userResponses, setUserResponses] = useState([]);
   const [questionsByCategory, setQuestionsByCategory] = useState({});
 
   const shuffleArray = (array) => {
@@ -35,14 +35,7 @@ function QuizContent(props) {
   }
 
   const handleResponse = (response) => {
-    const category = Object.keys(questionsByCategory)[currentCategoryIndex];
-    const categoryQuestions = questionsByCategory[category];
-    const currentQuestionIndex = categoryQuestions.length - 1;
-
-    setUserResponses({
-      ...userResponses,
-      [category]: { ...categoryQuestions[currentQuestionIndex], response },
-    });
+    setUserResponses([...userResponses, response === 1 ? "1" : "0"]);
 
     const nextCategoryIndex = currentCategoryIndex + 1;
 
@@ -60,7 +53,7 @@ function QuizContent(props) {
     const categoryQuestions = questionsByCategory[category];
 
     if (!categoryQuestions || categoryQuestions.length === 0) {
-      return <div>Quiz completed!</div>;
+      return;
     }
 
     const currentQuestion = categoryQuestions[categoryQuestions.length - 1];

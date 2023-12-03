@@ -20,6 +20,10 @@
     gap: 1rem;
     align-items: center;
 
+    &:hover {
+      cursor: pointer;
+    }
+
     svg {
       height: 100%;
       fill: #fff;
@@ -44,10 +48,12 @@
 
 .header-fill {
   background-color: rgba(134, 46, 156, 0.5);
-  height: 4rem;
+  height: 2em;
+  padding: 0.4rem 2rem;
+  gap: 1rem;
 
   p {
-    font-size: 1.2rem;
+    font-size: 0.8rem;
   }
 
   .list {

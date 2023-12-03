@@ -18,6 +18,7 @@ function Default(props) {
             strokeLinejoin="round"
           />
         </svg>
+        <div className={classes.sub}>Prześlij Obraz</div>
       </div>
 
       <div
@@ -42,6 +43,7 @@ function Default(props) {
             strokeLinejoin="round"
           />
         </svg>
+        <div className={classes.sub}>Zrób Zdjęcie</div>
       </div>
     </>
   );

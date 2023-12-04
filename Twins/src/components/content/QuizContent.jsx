@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import classes from "./Content.module.scss";
 import questions from "./questions.json";
+import axios from "axios";
 
 function QuizContent(props) {
   const [currentCategoryIndex, setCurrentCategoryIndex] = useState(0);
-  const [userResponses, setUserResponses] = useState([]);
+  const [character, setcharacter] = useState([]);
   const [questionsByCategory, setQuestionsByCategory] = useState({});
 
   const shuffleArray = (array) => {
@@ -34,17 +35,38 @@ function QuizContent(props) {
     setQuestionsByCategory(categorizedQuestions);
   }
 
-  const handleResponse = (response) => {
-    setUserResponses([...userResponses, response === 1 ? "1" : "0"]);
+  const handleResponse = async (answer) => {
+    setcharacter([...character, answer === 1 ? "1" : "0"]);
 
     const nextCategoryIndex = currentCategoryIndex + 1;
 
     if (nextCategoryIndex < Object.keys(questionsByCategory).length) {
       setCurrentCategoryIndex(nextCategoryIndex);
     } else {
-      console.log("Quiz completed!", userResponses);
+      console.log("Quiz completed!", character);
 
-      props.onShowAnswers();
+      const formData = new FormData();
+      formData.append("image", props.image);
+
+      try {
+        // const res1 = await axios.post(
+        //   "http://localhost:8000/api/upload/",
+        //   formData
+        // );
+
+        // console.log(res1.data);
+
+        // const res2 = await axios.post("http://localhost:8000/api/quiz/", {
+        //   character: [1, 1, 1, 1, 1, 1],
+        //   face_id: res1.data,
+        // });
+
+        // console.log(res2.data);
+
+        props.onShowAnswers(props.image);
+      } catch (error) {
+        console.error(error);
+      }
     }
   };
 

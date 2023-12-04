@@ -22,7 +22,13 @@ function Drop(props) {
     <div className={classes.webcamContainer}>
       {capturedImage ? (
         <div className={classes.camContent}>
-          <img src={capturedImage} alt="Captured" />
+          <img
+            src={capturedImage}
+            alt="Captured"
+            style={{
+              transform: "scaleX(-1)",
+            }}
+          />
         </div>
       ) : (
         <label>

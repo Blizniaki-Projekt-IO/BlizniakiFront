@@ -3,24 +3,24 @@ import axios from "axios";
 
 function Quiz(props) {
   const getResult = async () => {
-    const formData = new FormData();
-    formData.append("image", props.image);
+    // const formData = new FormData();
+    // formData.append("image", props.image);
 
-    try {
-      const response = await axios.post(
-        "http://localhost:8000/api/upload/",
-        formData,
-        {
-          headers: {},
-        }
-      );
+    props.onShowQuizContent(props.image);
 
-      console.log(response.data);
+    // try {
+    //   const response = await axios.post(
+    //     "http://localhost:8000/api/upload/",
+    //     formData
+    //   );
 
-      props.onShowAnswers();
-    } catch (error) {
-      console.error("Failed to send image to the server", error);
-    }
+    //   console.log(response);
+
+    //   // props.onShowAnswers();
+    //   props.onShowQuizContent(props.image);
+    // } catch (error) {
+    //   console.error(error);
+    // }
   };
 
   return (
@@ -28,7 +28,7 @@ function Quiz(props) {
       <div
         className={classes.col}
         onClick={() => {
-          props.onShowQuizContent();
+          getResult();
         }}
       >
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

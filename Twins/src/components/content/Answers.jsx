@@ -4,7 +4,7 @@ function Answers(props) {
   const result = {
     pies: 20,
     kot: 10,
-    lis: 30,
+    lis: 0,
     niedźwiedź: 70,
     surykatka: 0,
   };

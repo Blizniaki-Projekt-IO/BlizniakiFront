@@ -3,7 +3,7 @@ import classes from "./Content.module.scss";
 
 function Drop(props) {
   const [capturedImage, setCapturedImage] = useState(null);
-
+  const [capturedFile, setCapturedFile] = useState(null);
   const handleFileChange = async (event) => {
     const fileInput = event.target;
     const file = fileInput.files[0];
@@ -11,11 +11,13 @@ function Drop(props) {
     if (file) {
       const capturedImage = URL.createObjectURL(file);
       setCapturedImage(capturedImage);
+      setCapturedFile(file);
     }
   };
 
   const reload = () => {
     setCapturedImage(null);
+    setCapturedFile(null);
   };
 
   return (
@@ -72,7 +74,7 @@ function Drop(props) {
         {capturedImage && (
           <p
             onClick={() => {
-              props.onShowQuiz(capturedImage);
+              props.onShowQuiz(capturedImage, capturedFile);
             }}
           >
             <svg

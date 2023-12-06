@@ -3,24 +3,29 @@ import axios from "axios";
 
 function Quiz(props) {
   const getResult = async () => {
-    // const formData = new FormData();
-    // formData.append("image", props.image);
+    const formData = new FormData();
+    formData.append("image", props.file);
 
     props.onShowQuizContent(props.image);
 
-    // try {
-    //   const response = await axios.post(
-    //     "http://localhost:8000/api/upload/",
-    //     formData
-    //   );
+    try {
+      const response = await axios.post(
+        "http://localhost:8000/api/upload/",
+        formData,
+        {
+          headers: {
+            'Content-Type': 'multipart/form-data',
+          },
+      	}
+      );
 
-    //   console.log(response);
+      console.log(response);
 
-    //   // props.onShowAnswers();
-    //   props.onShowQuizContent(props.image);
-    // } catch (error) {
-    //   console.error(error);
-    // }
+      props.onShowAnswers();
+      props.onShowQuizContent(props.image);
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   return (

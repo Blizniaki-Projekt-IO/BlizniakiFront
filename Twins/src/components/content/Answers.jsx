@@ -31,7 +31,7 @@ function Answers(props) {
       )}
       <div className={classes.download}>
         <img src={props.image} alt="face" />
-        <button>Pobierz Raport</button>
+        <button>Pobierz raport</button>
       </div>
     </div>
   );

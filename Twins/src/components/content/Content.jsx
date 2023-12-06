@@ -17,10 +17,11 @@ function Content() {
     );
   };
 
-  const onShowQuiz = (image) => {
+  const onShowQuiz = (image, file) => {
     setContent(
       <Quiz
         image={image}
+        file={file}
         onShowQuizContent={onShowQuizContent}
         onShowAnswers={onShowAnswers}
       />

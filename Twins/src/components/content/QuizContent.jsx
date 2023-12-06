@@ -43,25 +43,13 @@ function QuizContent(props) {
     if (nextCategoryIndex < Object.keys(questionsByCategory).length) {
       setCurrentCategoryIndex(nextCategoryIndex);
     } else {
-      console.log("Quiz completed!", character);
-
-      const formData = new FormData();
-      formData.append("image", props.image);
-
       try {
-        // const res1 = await axios.post(
-        //   "http://localhost:8000/api/upload/",
-        //   formData
-        // );
+        const res2 = await axios.post("http://localhost:8000/api/quiz/", {
+          character: [1, 1, 1, 1, 1, 1],
+          face_id: 1,
+        });
 
-        // console.log(res1.data);
-
-        // const res2 = await axios.post("http://localhost:8000/api/quiz/", {
-        //   character: [1, 1, 1, 1, 1, 1],
-        //   face_id: res1.data,
-        // });
-
-        // console.log(res2.data);
+        console.log(res2.data);
 
         props.onShowAnswers(props.image);
       } catch (error) {

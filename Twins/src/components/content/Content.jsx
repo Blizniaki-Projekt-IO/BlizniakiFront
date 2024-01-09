@@ -36,12 +36,18 @@ function Content() {
     setContent(<Drop onShowDefault={onShowDefault} onShowQuiz={onShowQuiz} />);
   };
 
-  const onShowQuizContent = (image) => {
-    setContent(<QuizContent onShowAnswers={onShowAnswers} image={image} />);
+  const onShowQuizContent = (image, faceId) => {
+    setContent(
+      <QuizContent
+        onShowAnswers={onShowAnswers}
+        image={image}
+        faceId={faceId}
+      />
+    );
   };
 
-  const onShowAnswers = (image) => {
-    setContent(<Answers image={image} />);
+  const onShowAnswers = (image, result, url) => {
+    setContent(<Answers image={image} result={result} url={url} />);
   };
 
   const [content, setContent] = useState(

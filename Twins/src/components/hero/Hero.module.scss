@@ -24,7 +24,6 @@
     align-items: center;
     padding: 10rem 6rem 10rem 5rem;
     text-align: center;
-  
 
     h1 {
       font-size: 4rem;
@@ -62,6 +61,30 @@
       to {
         bottom: 2rem;
       }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .hero {
+    background-position: 60%;
+    background-size: cover;
+
+    &__intro {
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: #f8f0fc;
+    }
+
+    h1 {
+      text-shadow: #da77f2 2px 2px;
+    }
+    h2 {
+      text-shadow: #da77f2 1px 1px;
+    }
+
+    .arrow {
+      display: none;
     }
   }
 }

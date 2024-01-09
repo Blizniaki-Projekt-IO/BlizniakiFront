@@ -1,12 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import classes from "./Content.module.scss";
 import questions from "./questions.json";
 import axios from "axios";
 
 function QuizContent(props) {
+  const maxCount = 6;
+
   const [currentCategoryIndex, setCurrentCategoryIndex] = useState(0);
   const [character, setcharacter] = useState([]);
   const [questionsByCategory, setQuestionsByCategory] = useState({});
+  const [questionIndex, setQuestionIndex] = useState(0);
 
   const shuffleArray = (array) => {
     for (let i = array.length - 1; i > 0; i--) {
@@ -18,11 +21,14 @@ function QuizContent(props) {
 
   if (Object.keys(questionsByCategory).length === 0) {
     const categorizedQuestions = {};
+
     questions.forEach((question) => {
       const category = question.CECHA;
+
       if (!categorizedQuestions[category]) {
         categorizedQuestions[category] = [];
       }
+
       categorizedQuestions[category].push(question);
     });
 
@@ -35,26 +41,42 @@ function QuizContent(props) {
     setQuestionsByCategory(categorizedQuestions);
   }
 
+  const getResult = async () => {
+    try {
+      const response = await axios.post("http://localhost:8000/api/quiz/", {
+        // face_id: parseInt(props.faceId),
+        face_id: 1,
+        character: character,
+      });
+
+      const result = response.data.result;
+      const url = response.data.raport;
+
+      console.log(response.data);
+
+      props.onShowAnswers(props.image, result, url);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  useEffect(() => {
+    if (character.length === maxCount) {
+      getResult();
+    }
+  }, [character]);
+
   const handleResponse = async (answer) => {
-    setcharacter([...character, answer === 1 ? "1" : "0"]);
+    setcharacter([...character, answer === 1 ? 1 : 0]);
+
+    if (questionIndex < maxCount - 1) {
+      setQuestionIndex(questionIndex + 1);
+    }
 
     const nextCategoryIndex = currentCategoryIndex + 1;
 
     if (nextCategoryIndex < Object.keys(questionsByCategory).length) {
       setCurrentCategoryIndex(nextCategoryIndex);
-    } else {
-      try {
-        const res2 = await axios.post("http://localhost:8000/api/quiz/", {
-          character: [1, 1, 1, 1, 1, 1],
-          face_id: 1,
-        });
-
-        console.log(res2.data);
-
-        props.onShowAnswers(props.image);
-      } catch (error) {
-        console.error(error);
-      }
     }
   };
 
@@ -71,7 +93,9 @@ function QuizContent(props) {
     return (
       <div className={classes.elements}>
         <div>
-          <h1>{currentQuestion.CECHA}</h1>
+          <h1>
+            Pytanie {questionIndex + 1} <br /> {currentQuestion.CECHA}
+          </h1>
           <h2>{currentQuestion.PYTANIE}</h2>
         </div>
         <div className={classes.buttons}>

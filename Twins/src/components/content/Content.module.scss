@@ -5,9 +5,9 @@
   padding: 4rem;
   margin: auto;
   margin-top: 10rem;
-  margin-bottom: 10rem;
   background-color: #f3d9fa;
   border-radius: 2rem;
+  user-select: none;
 
   .indicator {
     position: absolute;
@@ -79,6 +79,28 @@
       }
     }
 
+    .col-stat {
+      position: relative;
+      border-radius: 2rem;
+      height: 100%;
+      transition: all 0.3s;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      justify-content: center;
+      opacity: 0.8;
+      color: #862e9c;
+      padding: 1rem;
+
+      h1 {
+        font-size: 3.2rem;
+      }
+
+      h2 {
+        font-size: 1.6rem;
+      }
+    }
+
     .webcamContainer {
       position: absolute;
       width: 100%;
@@ -87,6 +109,7 @@
       justify-content: center;
       align-items: center;
       overflow: hidden;
+      border-radius: 2rem;
 
       .camContent {
         transform: scaleX(-1);
@@ -101,7 +124,6 @@
 
         img {
           height: 28rem;
-          // max-width: 80%;
         }
       }
 
@@ -138,12 +160,6 @@
           &:nth-child(1) {
             svg {
               width: 60%;
-            }
-          }
-
-          &:nth-child(2) {
-            svg {
-              // width: 60%;
             }
           }
 
@@ -206,6 +222,8 @@
   padding: 8rem;
   width: 100%;
   height: 100%;
+  user-select: none;
+  overflow: hidden;
 
   .elements {
     height: 100%;
@@ -226,9 +244,14 @@
         border: none;
         outline: none;
         color: #f3d9fa;
+        border: solid 0.2rem #862e9c;
+
+        transition: all 0.1s;
 
         &:hover {
           cursor: pointer;
+          color: #862e9c;
+          background-color: #f3d9fa;
         }
       }
     }
@@ -237,9 +260,12 @@
 
 .resultsContainer {
   position: relative;
-  display: flex;
+  grid-column: span 2;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
   padding: 2rem;
-  align-items: end;
+  width: 100%;
+  height: 100%;
 
   h2 {
     position: absolute;
@@ -248,22 +274,53 @@
     font-size: 3rem;
   }
 
+  .columns {
+    display: flex;
+    gap: 0.5rem;
+    align-items: flex-end;
+    width: 100%;
+    height: 100%;
+
+    .column {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+      height: 80%;
+
+      .ind {
+        transition: all 1s ease-in-out;
+        width: 100%;
+      }
+
+      p {
+        padding-top: 0.6rem;
+        text-align: center;
+      }
+    }
+  }
+
   .download {
-    width: 300px;
+    width: 100%;
     height: 100%;
     display: flex;
+    justify-self: flex-end;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     gap: 2rem;
 
-    img {
-      width: 80%;
+    .img {
+      width: 100%;
+      height: 100%;
       border-radius: 1rem;
+      background-size: cover;
+      background-position: center;
     }
 
     button {
-      font-size: 2rem;
+      font-size: 1.6rem;
       padding: 1rem 2rem;
       border-radius: 1rem;
       background-color: #862e9c;
@@ -278,11 +335,154 @@
   }
 }
 
-.column {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
-  width: 100px;
-  margin-right: 10px;
+@media (max-width: 800px) {
+  .content {
+    height: 48rem;
+    padding: 1rem;
+
+    &__inner {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr;
+
+      .col {
+        svg {
+          width: 30%;
+        }
+      }
+
+      .webcamContainer {
+        .camContent {
+          display: flex;
+          justify-content: center;
+          height: 100%;
+
+          .webcam {
+            height: 100%;
+          }
+        }
+
+        .webcamPanel {
+          position: absolute;
+          top: calc(100% - 8rem);
+          right: 50%;
+          transform: translateX(50%) scaleX(-1);
+          width: 24rem;
+          height: 8rem;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-evenly;
+          align-items: center;
+
+          border-top-left-radius: 2rem;
+          border-top-right-radius: 2rem;
+          border-bottom-left-radius: 0;
+
+          p {
+            width: 20%;
+            transform: scaleX(-1);
+          }
+        }
+
+        label {
+          width: 80%;
+        }
+      }
+    }
+  }
+
+  .quizContainer {
+    padding: 4rem 2rem;
+
+    .elements {
+      .buttons {
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+
+        button {
+          font-size: 2rem;
+          padding: 1rem 2rem;
+          border-radius: 1rem;
+          width: 80%;
+
+          &:hover {
+            cursor: pointer;
+            color: #f3d9fa;
+            background-color: #862e9c;
+          }
+        }
+      }
+    }
+  }
+
+  .resultsContainer {
+    padding: 2rem;
+    grid-row: span 2;
+
+    display: flex;
+    flex-direction: column;
+
+    .columns {
+      .column {
+        width: 20%;
+
+        .ind {
+          transition: all 1s ease-in-out;
+          width: 100%;
+        }
+
+        p {
+          padding-top: 0.6rem;
+          text-align: center;
+        }
+      }
+    }
+
+    .download {
+      width: 100%;
+      height: 100%;
+
+      .img {
+        display: none;
+      }
+
+      button {
+        font-size: 1.6rem;
+        padding: 1rem 2rem;
+        border-radius: 1rem;
+        background-color: #862e9c;
+        border: none;
+        outline: none;
+        color: #f3d9fa;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .content {
+    &__inner {
+      .col {
+        svg {
+          width: 40%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .content {
+    &__inner {
+      .col {
+        svg {
+          width: 50%;
+        }
+      }
+    }
+  }
 }

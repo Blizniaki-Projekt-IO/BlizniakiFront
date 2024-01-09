@@ -14,15 +14,17 @@ function Quiz(props) {
         formData,
         {
           headers: {
-            'Content-Type': 'multipart/form-data',
+            "Content-Type": "multipart/form-data",
           },
-      	}
+        }
       );
 
       console.log(response);
 
+      const faceId = response.data.face_id;
+
       props.onShowAnswers();
-      props.onShowQuizContent(props.image);
+      props.onShowQuizContent(props.image, faceId);
     } catch (error) {
       console.error(error);
     }
@@ -30,28 +32,12 @@ function Quiz(props) {
 
   return (
     <>
-      <div
-        className={classes.col}
-        onClick={() => {
-          getResult();
-        }}
-      >
-        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M10.125 8.875C10.125 7.83947 10.9645 7 12 7C13.0355 7 13.875 7.83947 13.875 8.875C13.875 9.56245 13.505 10.1635 12.9534 10.4899C12.478 10.7711 12 11.1977 12 11.75V13"
-            stroke="#ae3ec9"
-            strokeWidth="1.5"
-            strokeLinecap="round"
-          />
-          <circle cx="12" cy="16" r="1" fill="#ae3ec9" />
-          <path
-            d="M7 3.33782C8.47087 2.48697 10.1786 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 10.1786 2.48697 8.47087 3.33782 7"
-            stroke="#ae3ec9"
-            strokeWidth="1.5"
-            strokeLinecap="round"
-          />
-        </svg>
-        <div className={classes.sub}>Wypełnij Quiz</div>
+      <div className={classes["col-stat"]}>
+        <h1>Super. Mamy to!</h1>
+        <h2>
+          Wypełnij teraz krótki quiz aby dowiedzieć się jakie zwierze drzemie w
+          twojej duszy.
+        </h2>
       </div>
 
       <div
@@ -77,7 +63,7 @@ function Quiz(props) {
           />
           <rect width="32" height="32" style={{ fill: "none" }} />
         </svg>
-        <div className={classes.sub}>Sprawdź Wynik</div>
+        <div className={classes.sub}>Wypełnij Quiz</div>
       </div>
     </>
   );
